@@ -45,6 +45,6 @@ class ProxyServer:
             client_handler = threading.Thread(target=self.handle_client, args=(client_socket,))
             client_handler.start()
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     proxy = ProxyServer('127.0.0.1', 8888)
     proxy.start()
